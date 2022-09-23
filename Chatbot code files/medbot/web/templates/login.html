@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+
+
+            <div class="w3-container" id="contact" style="margin-top:75px">
+             <h1 class="w3-xxxlarge w3-text-red"><b>Login</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Please enter your username and password</p>
+
+
+
+
+    {% include 'inc/form_errors.html' %}
+
+
+                <form action="/login" method="POST" xmlns="http://www.w3.org/1999/html">
+                    {{ form.csrf_token }}
+                    <div class="w3-section">
+                        {{ form.email.label(class='form-control-label') }} {{ form.email(class='form-control') }}
+                    </div>
+                    <div class="w3-section">
+                        {{ form.password.label(class='form-control-label') }} {{ form.password(class='form-control') }}
+                    </div>
+                    <div class="w3-section">
+                        {{ form.remember.label }} {{ form.remember }}
+                    </div>
+                    <div class="w3-section">
+                        {{ form.submit_1 }}
+                    </div>
+                </form>
+
+
+        </div>
+    </div>
+
+
+{% endblock %}

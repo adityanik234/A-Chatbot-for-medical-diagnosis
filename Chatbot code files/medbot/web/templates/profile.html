@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{{ url_for('new_post') }}" class="btn btn-info">Create New Post</a>
+    </br></br>
+    <h3>{{ current_user.username }}</h3>
+    <p>{{ current_user.email }}</p><hr/>
+
+    {% include 'inc/form_errors.html' %}
+    <form action="/profile" method="POST">
+        {{ form.csrf_token}}
+        {{ form.username.label}} {{ form.username}}
+        {{ form.email.label}} {{ form.email}}
+        {{ form.submit_2}}
+    </form>
+{% endblock %}

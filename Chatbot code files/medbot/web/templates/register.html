@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+
+
+        <div class="w3-container" id="contact" style="margin-top:75px">
+             <h1 class="w3-xxxlarge w3-text-red"><b>Register</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Please fill in the following details </p>
+
+
+
+            {% include 'inc/form_errors.html' %}
+            <form action="/register" method="POST" target="_blank">
+
+                {{ form.csrf_token }}
+                <div class="w3-section">
+                    {{ form.username.label(class='form-control-label') }} {{ form.username(class='form-control') }}
+                </div>
+                <div class="w3-section">
+                    {{ form.email.label(class='form-control-label') }} {{ form.email(class='form-control') }}
+                </div>
+                <div class="w3-section">
+                    {{ form.password.label(class='form-control-label') }} {{ form.password(class='form-control') }}
+                </div>
+                <div class="w3-section">
+                    {{ form.confirm_password.label(class='form-control-label') }} {{ form.confirm_password(class='form-control') }}
+                </div>
+                <div class="w3-section">
+                    {{ form.submit }}
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
