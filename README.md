@@ -1,3 +1,5 @@
+<img width="689" alt="Screenshot 2022-10-12 at 12 29 33 am" src="https://user-images.githubusercontent.com/95295620/195216828-5b69fcd3-e35b-4e02-baea-a7dd2279656b.png">
+<img width="689" alt="Screenshot 2022-10-12 at 12 30 31 am" src="https://user-images.githubusercontent.com/95295620/195216882-747a440e-292d-423d-afaa-14f431a96f30.png">
 # A-Chatbot-for-medical-diagnosis
 This project involves the use of NLP and Machine learning to develop a chatbot to diagnose patients with certain symptoms.
 
